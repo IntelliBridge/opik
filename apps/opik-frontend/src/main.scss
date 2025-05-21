@@ -22,8 +22,8 @@
     --popover-foreground: 222.2 84% 4.9%;
 
     --primary: 239 89% 64%;
-    --primary-hover: 238 62% 51%;
-    --primary-active: 238 65% 43%;
+    --primary-hover: 49 100% 50%; /* #FFD600, yellow for hover in dark mode */
+    --primary-active: 49 100% 40%; /* #CCAA00, dimmer yellow for active in dark mode */
     --primary-100: 235 85% 97%;
     --primary-foreground: 210 40% 98%;
 
@@ -31,7 +31,7 @@
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
-    --muted-slate: 215 16%, 47%;
+    --muted-slate: 210 6% 60%; /* #A3A8AE, lighter slate for dark mode */
     --muted-gray: 218 11% 65%;
     --muted-disabled: 220 14% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -40,7 +40,7 @@
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 213 25% 19%; /* #26323F, blueish dark for destructive foreground */
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
@@ -48,7 +48,7 @@
 
     --warning: 348 86% 61%;
     --success: 129 100% 42%;
-    --lite-slate: 215 20% 65%;
+    --lite-slate: 210 6% 70%; /* #C3C8CE, lighter slate for dark mode */
 
     --radius: 0.5rem;
 
@@ -60,42 +60,59 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+
+    --sidebar-background: #1E2832;
+    --table-header-background: #232A32;
+    --table-header-pinned-background: #1E2832;
+
+    --code-background: #181C20;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 224 17% 26%;
+    --background: 215 18% 16%; /* #232A32 */
+    --foreground: 0 0% 100%; /* #FFFFFF */
+    --foreground-secondary: 0 0% 100%; /* #FFFFFF for readability */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 18% 16%; /* #232A32 */
+    --card-foreground: 0 0% 100%; /* #FFFFFF */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 18% 16%; /* #232A32 */
+    --popover-foreground: 0 0% 100%; /* #FFFFFF */
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 49 100% 50%; /* #FFD600 */
+    --primary-foreground: 0 0% 0%; /* #000000 */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 3% 40%; /* #797C84 */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 3% 40%; /* #797C84 */
+    --muted-foreground: 0 0% 100%; /* #FFFFFF */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 49 100% 50%; /* #FFD600 */
+    --accent-foreground: 0 0% 0%; /* #000000 */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 100% 56%; /* #FF5252 */
+    --destructive-foreground: 213 25% 19%; /* #26323F, blueish dark for destructive foreground */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 210 3% 40%; /* #797C84 */
+    --input: 210 3% 40%; /* #797C84 */
+    --ring: 215 18% 16%; /* #232A32 */
 
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --warning: 38 100% 50%; /* #FFB300 */
+    --success: 122 39% 47%; /* #4CAF50 */
+    --lite-slate: 210 6% 70%; /* #C3C8CE, lighter slate for dark mode */
+
+    --chart-1: 210 90% 56%; /* #2196F3 */
+    --chart-2: 49 100% 50%; /* #FFD600 */
+    --chart-3: 0 100% 56%; /* #FF5252 */
+    --chart-4: 122 39% 47%; /* #4CAF50 */
+    --chart-5: 38 100% 50%; /* #FFB300 */
+
+    --sidebar-background: #1E2832;
+    --table-header-background: #232A32;
+    --table-header-pinned-background: #1E2832;
+
+    --code-background: #181C20;
   }
 
   .comet-expanded {
@@ -208,6 +225,8 @@
       "Liberation Mono",
       "Courier New",
       monospace;
+    background: var(--code-background);
+    color: var(--foreground);
   }
 
   .comet-custom-scrollbar {
@@ -250,9 +269,9 @@
   }
 }
 
-// Table
+/* Table */
 
-// workaround to force firefox work correctly with cell height - https://stackoverflow.com/questions/36575846/how-to-make-div-fill-td-height-in-firefox
+/* workaround to force firefox work correctly with cell height - https://stackoverflow.com/questions/36575846/how-to-make-div-fill-td-height-in-firefox */
 .comet-fix-cell-height {
   height: 1px;
 }
@@ -263,7 +282,7 @@
   }
 }
 
-// rewrite padding for first cell for tables that takes full width with sticky behaviour
+/* rewrite padding for first cell for tables that takes full width with sticky behaviour */
 .comet-sticky-table {
   thead:before {
     content: "";
@@ -358,5 +377,17 @@ div.cm-theme div.cm-search.cm-panel {
 
   button[name="close"] {
     @apply top-0 bottom-px my-auto leading-none size-6 opacity-50 hover:opacity-100;
+  }
+}
+
+@layer utilities {
+  .bg-sidebar {
+    background-color: var(--sidebar-background) !important;
+  }
+  .bg-table-header {
+    background-color: var(--table-header-background) !important;
+  }
+  .bg-table-header-pinned {
+    background-color: var(--table-header-pinned-background) !important;
   }
 }

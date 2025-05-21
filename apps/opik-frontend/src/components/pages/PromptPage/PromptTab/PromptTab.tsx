@@ -98,15 +98,15 @@ const PromptTab = ({ prompt }: PromptTabInterface) => {
           </Button>
         </div>
 
-        <div className="mt-4 flex gap-6 rounded-md border bg-white p-6">
+        <div className="bg-card mt-4 flex gap-6 rounded-md border p-6">
           <div className="flex grow flex-col gap-2">
             <p className="comet-body-s-accented text-foreground">Prompt</p>
-            <code className="comet-code flex w-full whitespace-pre-wrap break-all rounded-md bg-primary-foreground p-3">
+            <code className="comet-code bg-card flex w-full whitespace-pre-wrap break-all rounded-md p-3">
               {activeVersion?.template}
             </code>
             {activeVersion?.metadata && (
               <>
-                <p className="comet-body-s-accented mt-4 text-foreground">
+                <p className="comet-body-s-accented text-foreground mt-4">
                   Metadata
                 </p>
                 <CodeHighlighter
@@ -118,17 +118,17 @@ const PromptTab = ({ prompt }: PromptTabInterface) => {
 
             {activeVersion?.change_description && (
               <>
-                <p className="comet-body-s-accented mt-4 text-foreground">
+                <p className="comet-body-s-accented text-foreground mt-4">
                   Commit message
                 </p>
-                <div className="comet-body-s flex w-full whitespace-pre-wrap break-all rounded-md bg-primary-foreground p-3">
+                <div className="comet-body-s bg-card flex w-full whitespace-pre-wrap break-all rounded-md p-3">
                   {activeVersion.change_description}
                 </div>
               </>
             )}
           </div>
           <div className="min-w-[320px]">
-            <p className="comet-body-s-accented mb-2 text-foreground">
+            <p className="comet-body-s-accented text-foreground mb-2">
               Commit history
             </p>
 

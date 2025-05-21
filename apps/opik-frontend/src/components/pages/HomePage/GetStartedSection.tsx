@@ -42,7 +42,7 @@ const GetStartedSection = () => {
       <div className="flex gap-x-4">
         <div
           onClick={openLogTraceDialog}
-          className="flex w-full max-w-[300px] cursor-pointer items-center gap-3 rounded-md border bg-white p-4 transition-shadow hover:shadow-md"
+          className="flex w-full max-w-[300px] cursor-pointer items-center gap-3 rounded-md border bg-[#1E2832] p-4 transition-shadow hover:shadow-md"
         >
           <div className="flex size-[24px] items-center justify-center rounded bg-[#DAFBF0] ">
             <InspectionPanel className="size-3.5 text-[#295747]" />
@@ -51,7 +51,7 @@ const GetStartedSection = () => {
         </div>
         <div
           onClick={openNewExperimentDialog}
-          className="flex w-full max-w-[300px] cursor-pointer items-center gap-3 rounded-md border bg-white p-4 transition-shadow hover:shadow-md"
+          className="flex w-full max-w-[300px] cursor-pointer items-center gap-3 rounded-md border bg-[#1E2832] p-4 transition-shadow hover:shadow-md"
         >
           <div className="flex size-[24px] items-center justify-center rounded bg-[#FDE2F6] ">
             <MousePointer className="size-3.5 text-[#72275F]" />
@@ -61,7 +61,7 @@ const GetStartedSection = () => {
         {isGuardrailsEnabled && (
           <div
             onClick={openGuardrailsDialog}
-            className="flex w-full max-w-[300px] cursor-pointer items-center gap-3 rounded-md border bg-white p-4 transition-shadow hover:shadow-md"
+            className="flex w-full max-w-[300px] cursor-pointer items-center gap-3 rounded-md border bg-[#1E2832] p-4 transition-shadow hover:shadow-md"
           >
             <div className="flex size-[24px] items-center justify-center rounded bg-[#FEE3D7] ">
               <Construction className="size-3.5 text-[#73422B]" />
@@ -70,7 +70,7 @@ const GetStartedSection = () => {
           </div>
         )}
         <Link
-          className="flex w-full max-w-[300px] cursor-pointer items-center gap-3 rounded-md border bg-white p-4 transition-shadow hover:shadow-md"
+          className="flex w-full max-w-[300px] cursor-pointer items-center gap-3 rounded-md border bg-[#1E2832] p-4 transition-shadow hover:shadow-md"
           to={"/$workspaceName/playground"}
           params={{ workspaceName }}
         >
@@ -88,7 +88,7 @@ const GetStartedSection = () => {
         <div className="flex w-full min-w-fit flex-col pb-12">
           <div className="pb-8">
             <SheetTitle>Log a trace</SheetTitle>
-            <div className="comet-body-s m-auto mt-4 w-[468px] self-center text-center text-muted-slate">
+            <div className="comet-body-s text-muted-slate m-auto mt-4 w-[468px] self-center text-center">
               Select a framework and follow the instructions to integrate Comet
               with your code, or explore our ready-to-run examples on the right
             </div>

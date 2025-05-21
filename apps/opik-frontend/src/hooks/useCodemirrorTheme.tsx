@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { tags as t } from "@lezer/highlight";
-import { githubLightInit } from "@uiw/codemirror-theme-github";
+import { githubDarkInit } from "@uiw/codemirror-theme-github";
 
 type CodemirrorThemeProps = {
   editable?: boolean;
@@ -10,18 +10,18 @@ export const useCodemirrorTheme = (props?: CodemirrorThemeProps) => {
   const { editable = false } = props || {};
   return useMemo(
     () =>
-      githubLightInit({
+      githubDarkInit({
         settings: {
           fontFamily: `Ubuntu Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`,
           fontSize: "0.875rem",
-          foreground: "#030712",
-          background: "#F8FAFC",
-          gutterBackground: "#F8FAFC",
+          foreground: "#F8FAFC",
+          background: "#181C20",
+          gutterBackground: "#181C20",
           gutterForeground: "#94A3B8",
-          gutterBorder: "#F8FAFC",
-          lineHighlight: editable ? "#F1F5F9" : "transparent",
+          gutterBorder: "#232A32",
+          lineHighlight: editable ? "#232A32" : "transparent",
         },
-        styles: [{ tag: [t.className, t.propertyName], color: "#005CC5" }],
+        styles: [{ tag: [t.className, t.propertyName], color: "#FFD600" }],
       }),
     [editable],
   );

@@ -35,7 +35,7 @@ const GeneralGuardrailData: React.FC<{ data: GuardrailComputedResult[] }> = ({
   return data.map(({ name, status }) => (
     <div key={name} className="flex items-center gap-1.5 px-2 py-1">
       <GuardrailStatus status={status} />
-      <span className="comet-body-xs-accented min-w-0 flex-1 truncate text-muted-slate">
+      <span className="comet-body-xs-accented text-muted-slate min-w-0 flex-1 truncate">
         {GuardrailNamesLabelMap[name as GuardrailTypes]}
       </span>
       <span className="comet-body-xs-accented text-foreground first-letter:uppercase">
@@ -73,13 +73,13 @@ const GuardrailsCell = <TData,>(context: CellContext<TData, unknown>) => {
         <HoverCardTrigger asChild>
           <div className="flex items-center gap-1 px-2">
             <GuardrailStatus status={generalStatus} />
-            <span className="comet-body-s truncate text-foreground first-letter:uppercase">
+            <span className="comet-body-s text-foreground truncate first-letter:uppercase">
               {generalStatus}
             </span>
           </div>
         </HoverCardTrigger>
         <HoverCardContent
-          className="w-[240px] bg-popover p-0"
+          className="bg-popover w-[240px] p-0"
           onClick={(event) => event.stopPropagation()}
           side="top"
           align="end"

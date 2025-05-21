@@ -23,7 +23,7 @@ const ErrorTab: React.FunctionComponent<ErrorTabProps> = ({ data }) => {
       <AccordionItem value="type">
         <AccordionTrigger>Exception type</AccordionTrigger>
         <AccordionContent>
-          <div className="whitespace-pre-wrap break-words rounded-md bg-primary-foreground px-4 py-2">
+          <div className="bg-card whitespace-pre-wrap break-words rounded-md px-4 py-2">
             {error.exception_type}
           </div>
         </AccordionContent>
@@ -32,7 +32,7 @@ const ErrorTab: React.FunctionComponent<ErrorTabProps> = ({ data }) => {
         <AccordionItem value="message">
           <AccordionTrigger>Message</AccordionTrigger>
           <AccordionContent>
-            <div className="whitespace-pre-wrap break-words rounded-md bg-primary-foreground px-4 py-2">
+            <div className="bg-card whitespace-pre-wrap break-words rounded-md px-4 py-2">
               {error.message}
             </div>
           </AccordionContent>
@@ -41,7 +41,7 @@ const ErrorTab: React.FunctionComponent<ErrorTabProps> = ({ data }) => {
       <AccordionItem value="traceback">
         <AccordionTrigger>Traceback</AccordionTrigger>
         <AccordionContent>
-          <div className="whitespace-pre-wrap break-words rounded-md bg-primary-foreground px-4 py-2">
+          <div className="bg-card whitespace-pre-wrap break-words rounded-md px-4 py-2">
             {error.traceback}
           </div>
         </AccordionContent>

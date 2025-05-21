@@ -57,7 +57,13 @@ export const getCommonPinningClasses = <TData,>(
 ): string => {
   const isPinned = column.getIsPinned();
 
-  return isPinned ? (isHeader ? "bg-[#FBFCFD]" : "bg-white") : "";
+  return isPinned
+    ? isHeader
+      ? "bg-table-header-pinned"
+      : "bg-background"
+    : isHeader
+      ? "bg-table-header"
+      : "";
 };
 
 const getRowRange = <TData,>(
