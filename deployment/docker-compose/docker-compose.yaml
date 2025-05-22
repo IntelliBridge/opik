@@ -227,7 +227,7 @@ services:
         condition: service_healthy
 
   frontend:
-    image: ghcr.io/comet-ml/opik/opik-frontend:${OPIK_VERSION:-latest}
+    image: 132880019009.dkr.ecr.us-east-1.amazonaws.com/opik:latest
     pull_policy: always
     build:
       context: ../../apps/opik-frontend
