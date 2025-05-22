@@ -7,12 +7,12 @@ export type GoogleColabCardCoreProps = {
 };
 const GoogleColabCardCore: React.FC<GoogleColabCardCoreProps> = ({ link }) => {
   return (
-    <div className="flex flex-1 flex-col justify-between gap-4 rounded-md border bg-white p-6">
+    <div className="bg-card border-border flex flex-1 flex-col justify-between gap-4 rounded-md border p-6 shadow-md">
       <div className="comet-title-xs text-foreground-secondary">
         Full example
       </div>
       <div className="gap-3">
-        <div className="comet-body-s mb-4 text-muted-slate">
+        <div className="comet-body-s text-muted-slate mb-4">
           Try this end to end example in Google Colab:
         </div>
         <Button variant="outline" asChild className="w-full justify-between">

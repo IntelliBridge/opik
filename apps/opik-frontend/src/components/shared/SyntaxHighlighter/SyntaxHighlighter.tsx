@@ -140,8 +140,8 @@ const SyntaxHighlighter: React.FunctionComponent<SyntaxHighlighterProps> = ({
   }, [prettifyConfig, code.canBePrettified]);
 
   return (
-    <div className="overflow-hidden rounded-md bg-primary-foreground">
-      <div className="flex h-10 items-center justify-between border-b border-border pr-2">
+    <div className="bg-card overflow-hidden rounded-md">
+      <div className="border-border flex h-10 items-center justify-between border-b pr-2">
         <SelectBox
           value={code.mode}
           onChange={(v) => setMode(v as MODE_TYPE)}

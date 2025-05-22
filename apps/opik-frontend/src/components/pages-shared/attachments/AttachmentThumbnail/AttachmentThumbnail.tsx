@@ -78,7 +78,7 @@ const AttachmentThumbnail: React.FC<AttachmentThumbnailProps> = ({
           className="size-full object-contain"
         />
       ) : (
-        <div className="flex size-full items-center justify-center rounded-sm bg-primary-foreground">
+        <div className="bg-card flex size-full items-center justify-center rounded-sm">
           <Icon className="size-8 text-slate-300" strokeWidth={1.33} />
         </div>
       )}

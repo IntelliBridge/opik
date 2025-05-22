@@ -12,20 +12,21 @@ const buttonVariants = cva(
         default:
           "bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-active disabled:bg-muted-gray disabled:opacity-100",
         special:
-          "bg-[#19A979] text-primary-foreground hover:bg-[#1E8A66] active:bg-[#1A7557] disabled:bg-muted-gray disabled:opacity-100",
+          "text-primary-foreground disabled:bg-muted-gray bg-[#19A979] hover:bg-[#1E8A66] active:bg-[#1A7557] disabled:opacity-100",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-border bg-background hover:bg-primary-foreground hover:text-foreground active:bg-primary-100 active:text-foreground disabled:border-muted-disabled disabled:text-muted-gray disabled:opacity-100",
+          "border-border bg-background hover:bg-primary-foreground hover:text-foreground active:bg-primary-100 active:text-foreground disabled:text-muted-gray border disabled:border-none disabled:opacity-100",
         secondary:
-          "bg-primary-100 text-primary hover:bg-secondary hover:text-primary-hover active:bg-secondary active:text-primary-active disabled:bg-muted-disabled disabled:text-muted-gray disabled:opacity-100",
+          "bg-primary-100 text-primary hover:bg-secondary hover:text-primary-hover active:bg-secondary active:text-primary-active disabled:bg-muted-disabled disabled:text-muted-gray dark:text-primary dark:hover:text-primary dark:active:text-primary disabled:border-none disabled:opacity-100 dark:bg-[#232A32] dark:hover:bg-[#2A323A] dark:active:bg-[#323A42]",
         ghost:
-          "font-normal hover:text-primary-hover active:text-primary-active disabled:text-muted-gray disabled:opacity-100",
+          "hover:text-primary-hover active:text-primary-active disabled:text-muted-gray font-normal disabled:opacity-100",
         minimal:
-          "font-normal text-light-slate hover:text-foreground active:text-foreground disabled:text-muted-gray disabled:opacity-100",
+          "text-light-slate hover:text-foreground active:text-foreground disabled:text-muted-gray font-normal disabled:opacity-100",
         link: "text-primary underline-offset-4 hover:underline",
         tableLink:
-          "text-foreground underline underline-offset-4 hover:text-primary active:text-primary-active disabled:text-muted-gray disabled:opacity-100",
+          "text-foreground hover:text-primary active:text-primary-active disabled:text-muted-gray underline underline-offset-4 disabled:opacity-100",
+        dark: "text-primary border-border border bg-[#232A32] hover:bg-[#2A323A] active:bg-[#323A42] disabled:border-none dark:bg-[#232A32] dark:hover:bg-[#2A323A] dark:active:bg-[#323A42]",
       },
       size: {
         default: "h-10 px-4 py-2",

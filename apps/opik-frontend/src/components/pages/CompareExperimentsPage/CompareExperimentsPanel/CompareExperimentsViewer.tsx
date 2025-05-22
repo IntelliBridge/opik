@@ -87,7 +87,7 @@ const CompareExperimentsViewer: React.FunctionComponent<
       <div className="flex items-center justify-between gap-1 pb-4">
         <TooltipWrapper content={name}>
           <div className="flex items-center gap-2 overflow-hidden">
-            <FlaskConical className="size-4 shrink-0 text-muted-slate" />
+            <FlaskConical className="text-muted-slate size-4 shrink-0" />
             <h2 className="comet-body-accented truncate">{name}</h2>
           </div>
         </TooltipWrapper>
@@ -109,7 +109,7 @@ const CompareExperimentsViewer: React.FunctionComponent<
       {renderOutput()}
 
       {isTraceExist && (
-        <div className="sticky bottom-0 right-0 mt-auto flex max-h-[50vh] shrink-0 flex-col bg-white contain-content">
+        <div className="bg-card sticky bottom-0 right-0 mt-auto flex max-h-[50vh] shrink-0 flex-col contain-content">
           <div className="box-border flex min-h-14 shrink grow flex-col border-y">
             <ExperimentFeedbackScoresViewer
               feedbackScores={feedbackScores}

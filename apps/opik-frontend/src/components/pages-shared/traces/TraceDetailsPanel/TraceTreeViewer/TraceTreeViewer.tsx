@@ -280,11 +280,11 @@ const TraceTreeViewer: React.FunctionComponent<TraceTreeViewerProps> = ({
       <div className="mt-4 min-w-[400px] max-w-full">
         <div className="mt-2 flex flex-row items-end gap-2 px-6">
           <div className="comet-title-s">Trace spans</div>
-          <div className="comet-body-s pb-[3px] text-muted-slate">
+          <div className="comet-body-s text-muted-slate pb-[3px]">
             <div>{traceSpans.length} spans</div>
           </div>
         </div>
-        <div className="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-x-8 gap-y-2 bg-white px-6 pb-4 pt-3">
+        <div className="bg-card sticky top-0 z-10 flex flex-wrap items-center justify-between gap-x-8 gap-y-2 px-6 pb-4 pt-3">
           <div className="flex items-center gap-2">
             <SearchInput
               searchText={search}

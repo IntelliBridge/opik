@@ -367,7 +367,7 @@ const SideBar: React.FunctionComponent<SideBarProps> = ({
       );
 
       const linkClasses = cn(
-        "comet-body-s flex h-9 w-full items-center gap-2 text-foreground rounded-md hover:bg-primary-foreground data-[status=active]:bg-primary-100 data-[status=active]:text-primary",
+        "comet-body-s flex h-9 w-full items-center gap-2 rounded-md hover:bg-primary-foreground data-[status=active]:bg-background data-[status=active]:text-primary",
         expanded ? "pl-[10px] pr-3" : "w-9 justify-center",
       );
 
@@ -396,7 +396,7 @@ const SideBar: React.FunctionComponent<SideBarProps> = ({
         <li key={group.id} className={cn(expanded && "mb-1")}>
           <div>
             {group.label && expanded && (
-              <div className="comet-body-s truncate pb-1 pl-2.5 pr-3 pt-3 text-light-slate">
+              <div className="comet-body-s text-light-slate truncate pb-1 pl-2.5 pr-3 pt-3">
                 {group.label}
               </div>
             )}
@@ -425,7 +425,7 @@ const SideBar: React.FunctionComponent<SideBarProps> = ({
 
   return (
     <>
-      <aside className="comet-sidebar-width group h-[calc(100vh-var(--banner-height))] border-r transition-all">
+      <aside className="comet-sidebar-width bg-sidebar group h-[calc(100vh-var(--banner-height))] border-r transition-all">
         <div className="comet-header-height relative flex w-full items-center justify-between gap-6 border-b">
           <Link
             to={HOME_PATH}
@@ -441,13 +441,13 @@ const SideBar: React.FunctionComponent<SideBarProps> = ({
             <ul className="flex flex-col gap-1 pb-2">
               {renderGroups(MENU_ITEMS)}
             </ul>
-            <div className="flex flex-col gap-4">
+            {/* <div className="flex flex-col gap-4">
               <Separator />
               <ul className="flex flex-col gap-1">
                 <GitHubStarListItem expanded={expanded} />
                 {renderItems(bottomMenuItems)}
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </aside>

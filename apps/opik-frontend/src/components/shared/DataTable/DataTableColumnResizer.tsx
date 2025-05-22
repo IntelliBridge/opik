@@ -49,7 +49,7 @@ const DataTableColumnResizer = <TData,>({
           isLastInGroup && "-top-2 h-11",
         )}
       ></div>
-      <div className="absolute inset-y-0 w-px bg-transparent transition-colors group-hover:bg-gray-600 group-active:bg-blue-600"></div>
+      <div className="absolute inset-y-0 w-px bg-transparent transition-colors group-hover:bg-gray-600 group-active:bg-gray-600"></div>
     </div>
   );
 };

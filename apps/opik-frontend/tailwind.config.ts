@@ -36,7 +36,7 @@ module.exports = {
         success: "hsl(var(--success))",
         "light-slate": "hsl(var(--lite-slate))",
         soft: {
-          background: "#FCFCFD",
+          background: "#0F161C",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",

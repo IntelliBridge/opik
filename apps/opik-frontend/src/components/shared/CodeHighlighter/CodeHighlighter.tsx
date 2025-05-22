@@ -41,7 +41,7 @@ const CodeHighlighter: React.FunctionComponent<CodeHighlighterProps> = ({
   });
 
   return (
-    <div className="relative overflow-hidden rounded-md bg-primary-foreground">
+    <div className="bg-card relative overflow-hidden rounded-md">
       <div className="absolute right-2 top-0.5 z-10">
         <CopyButton
           message="Successfully copied code"
